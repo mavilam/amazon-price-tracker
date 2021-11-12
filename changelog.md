@@ -1,9 +1,5 @@
-# Changelog - Amazon Price Tracker
-## November 28, 2019
-* Cleaned up the code & split classes into separate files
-* Added feature to remove items from tracking list
-* Items are now automatically removed once they drop below their target price and alerts are sent out
-## November 26, 2019
-* Now creating changelogs!
-* Fixed an issue with commas in item names
-* Reorganized file structure
+# Changelog - Amazon Price Tracker desde el fork
+## November 12, 2021
+* Eliminar código que no es necesario para la versión actual
+* Limpiar y adaptar el código para nomenclatura python
+* Añadir capacidad de mandar mensajes a telegram

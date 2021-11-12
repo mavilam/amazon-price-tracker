@@ -1,18 +1,22 @@
-# Amazon Price Tracker v3.2
-An amazon price tracker that will send you alerts when an item goes below your target price.
+*Este proyecto es un fork para adaptar el proyecto original para amazon España y poder usarlo como cli.*
+*Todavía en construcción* 
+
+# Amazon Price Tracker
+Tracker de productos de amazon que te enviará un mensaje a telegram cuando el precio baje del indicado
 ## Features
-* You can track multiple different items at the same time
-* You can set your own target price for each item being tracked
-* Prices of each item are graphed and saved as PNGs
-* Alerts will be sent to you via email and/or text
-## Installation
-#### Dependencies
-* Use `pip install -r requirements.txt` to install the required packages
-#### From Source
-* Clone from this repository
-* Go into `settings.py` and fill in the appropriate fields
-* Make sure to store your password in `sender_password.key`
-## The Road Ahead
-- [x] Add feature to remove items from the tracking list
-- [ ] Add a GUI
-- [ ] Turn this project into a client/server app with a user authentication system
+* Capacidad de trackear más de un producto
+* Configura el precio de límite de cada producto
+* Las alertas te llegarán al chat configurado de telegram
+## Como usarlo
+### Dependencias
+Puedes instalar las dependencias con `pip install -r requirements.txt`
+### Como funciona
+1. Clona el repositorio
+2. Cambia tu token de telegram y tu id de chat en `settings.py` 
+3. Añade linea a linea en tracker/data/data.csv cada producto con el formato [url del producto],[precio objetivo]
+4. Ejecuta el script
+```bash
+python tracker/main.py
+```
+## Próximos pasos
+- [ ] Añadir una opción para insertar un producto por parámetros. 
