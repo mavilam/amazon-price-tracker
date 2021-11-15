@@ -4,9 +4,8 @@ import argparse
 from tracker import Tracker
 from communication import Communication
 from settings import CSV_ITEM_FILE
+import item_management
 
-parser = argparse.ArgumentParser(prog="Program to demonstrate different argparse features")
-args = parser.parse_args()
 
 def tracker_instance(url, target_price):
     item = Tracker(url, target_price)
@@ -30,4 +29,10 @@ def main_loop():
     
 
 if __name__ == "__main__":
-    main_loop()
+    parser = argparse.ArgumentParser("Track the price of your desired amazon product")
+    parser.add_argument('-a', '--add', type=str, nargs=2, help="Add a new product: --add [url] [desired price]")
+    args = parser.parse_args()
+    if args.add and len(args.add) > 1:
+        item_management.add_item(args.add[0], args.add[1])
+    else:
+        main_loop()

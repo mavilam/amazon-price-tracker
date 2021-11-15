@@ -24,5 +24,6 @@ python tracker/main.py
 3. Escribe un mensaje
 4. En la respuesta habrá un campo "from" y dentro un campo "id", ese es tu chat id
 ## Próximos pasos
-- [ ] Añadir una opción para insertar un producto por parámetros. 
+- [x] Añadir una opción para insertar un producto por parámetros. 
 - [ ] Mejorar sistema de log. 
+- [ ] Hacer código más defensivo
