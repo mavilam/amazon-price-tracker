@@ -18,11 +18,26 @@ Puedes instalar las dependencias con `pip install -r requirements.txt`
 ```bash
 python tracker/main.py
 ```
+
+### Crear un bot de telegram
+Pues ver como crear un bot fácilmente [aquí](https://core.telegram.org/bots#3-how-do-i-create-a-bot).
 ### Obtener chat id de telegram
 1. Busca en telegram el bot @RawDataBot
 2. Pulsa /start
 3. Escribe un mensaje
 4. En la respuesta habrá un campo "from" y dentro un campo "id", ese es tu chat id
+
+### Configurar el proceso en tu propia máquina
+Puedes configurar una entrada en la tabla de cron de tu propio ordenador. Los precios no suelen fluctuar en cuestion de minutos, por lo que con ejecutarse una vez al día suele ser suficiente. 
+Ejecutando el siguiente comando puedes editar la tabla de cron:
+```bash
+crontab -e
+```
+Si añades la siguiente linea se ejecutará el proceso todos los días a las 10 am:
+```
+0 10 * * * python {path al proyecto}/amazon-price-tracker/tracker/main.py
+```
+
 ## Próximos pasos
 - [x] Añadir una opción para insertar un producto por parámetros. 
 - [ ] Mejorar sistema de log. 
