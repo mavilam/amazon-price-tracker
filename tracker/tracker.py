@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 class Tracker():
     
     def __init__(self, URL, target_price):
-        page = requests.get(URL, headers={"User-Agent": ''})
+        page = requests.get(URL, headers={"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:61.0) Gecko/20100101 Firefox/"})
         soup0 = BeautifulSoup(page.content, "html.parser")
         soup = BeautifulSoup(soup0.prettify(), "html.parser")
 
